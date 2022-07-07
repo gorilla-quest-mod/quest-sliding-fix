@@ -14,7 +14,7 @@ on:
       - '.gitignore'
       - '**.zip'
 env:
-     module_id: songbrowser
+     module_id: mymod
      version: 0.1.0-Dev.${{ github.run_number }}
 
 jobs:
