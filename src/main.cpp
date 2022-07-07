@@ -2,6 +2,13 @@
 
 static ModInfo modInfo; // Stores the ID and version of our mod, and is sent to the modloader upon startup
 
+MAKE_HOOK_MATCH(MyHook, &GorillaLocomotion::Player::LateUpdate, void, GorillaLocomotion::Player* self) {
+    // your code here
+    MyHook(self);
+    self->playerRigidBody->velocity = self->playerRigidBody->velocity * 1.1f;
+    // or here
+}
+
 // Loads the config from disk using our modInfo, then returns it for use
 // other config tools such as config-utils don't use this config, so it can be removed if those are in use
 Configuration& getConfig() {
@@ -30,6 +37,7 @@ extern "C" void load() {
     il2cpp_functions::Init();
 
     getLogger().info("Installing hooks...");
+    INSTAL_HOOK(getLogger(), MyHook);
     // Install our hooks (none defined yet)
     getLogger().info("Installed all hooks!");
 }
