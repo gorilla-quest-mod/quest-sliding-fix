@@ -1,5 +1,5 @@
 Param(
-    [Parameter(Mandatory=$false, HelpMessage="The name the output qmod file should have")][String] $qmodname="SongBrowser",
+    [Parameter(Mandatory=$false, HelpMessage="The name the output qmod file should have")][String] $qmodname="slidefix",
 
     [Parameter(Mandatory=$false, HelpMessage="Switch to create a clean compilation")]
     [Alias("rebuild")]
