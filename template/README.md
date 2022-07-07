@@ -1,6 +1,6 @@
-# #{name}
+#Slide Fix
 
-#{description}
+Fix Sliding
 
 ## Credits
 

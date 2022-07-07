@@ -2,7 +2,7 @@
 include(qpm_defines.cmake)
 
 # override mod id
-set(MOD_ID "#{id}")
+set(MOD_ID "mymod")
 
 # Enable link time optimization
 # In my experience, this can be highly unstable but it nets a huge size optimization and likely performance
@@ -13,6 +13,8 @@ set(MOD_ID "#{id}")
 
 cmake_minimum_required(VERSION 3.21)
 project(${COMPILE_ID})
+
+set(CMAKE_MAKE_PROGRAM make)
 
 # export compile commands for significantly better intellisense
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
