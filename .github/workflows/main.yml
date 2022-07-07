@@ -85,17 +85,17 @@ jobs:
     - name: QPM Restore
       run: |
         ./QPM/qpm-rust restore
-#    - name: Check dependency Folders
-#      run: |
-#        echo "Checking extern includes"
-#        ls -lh ${GITHUB_WORKSPACE}/extern/includes
-#        echo ""
-#        echo "Checking libs"
-#        ls -lh ${GITHUB_WORKSPACE}/extern/libs
-#        echo ""
-#        echo "Checking QPM-Rust/cache Folder"
-#        ls -lh $HOME/.local/share/QPM-Rust/cache
-#        echo ""
+    - name: Check dependency Folders
+      run: |
+        echo "Checking extern includes"
+        ls -lh ${GITHUB_WORKSPACE}/extern/includes
+        echo ""
+        echo "Checking libs"
+        ls -lh ${GITHUB_WORKSPACE}/extern/libs
+        echo ""
+        echo "Checking QPM-Rust/cache Folder"
+        ls -lh $HOME/.local/share/QPM-Rust/cache
+        echo ""
     - name: Build
       run: |
         cd ${GITHUB_WORKSPACE}
