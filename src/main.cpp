@@ -1,5 +1,4 @@
 #include "main.hpp"
-#include "GorillaLocomotion/Player.hpp"
 
 static ModInfo modInfo; // Stores the ID and version of our mod, and is sent to the modloader upon startup
 
