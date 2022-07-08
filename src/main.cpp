@@ -2,10 +2,9 @@
 
 static ModInfo modInfo; // Stores the ID and version of our mod, and is sent to the modloader upon startup
 
-MAKE_HOOK_MATCH(MyHook, &GorillaLocomotion::Player::LateUpdate, void, GorillaLocomotion::Player* self) {
+MAKE_HOOK_MATCH(MyHook, il2cpp_utils::FindMethod(il2cpp_utils::GetClassFromName("GorillaLocomotion", "Player"), "LateUpdate"), void, il2cpp_utils::GetClassFromName("GorillaLocomotion", "Player")* self) {
     // your code here
     MyHook(self);
-    self->playerRigidBody->velocity = self->playerRigidBody->velocity * 1.1f;
     // or here
 }
 
